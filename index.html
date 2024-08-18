@@ -10,26 +10,36 @@
     <div class="container">
       <h2>Contact Us</h2>
       <form action="">
-        <div id="first_name">
-          <label>First Name</label>
-          <input type="text" />
-        </div>
-        <div id="last_name">
-          <label>Last Name</label>
-          <input type="text" />
+        <div id="name">
+          <div id="first_name">
+            <label>First Name</label>
+            <input class="border-color" type="text" />
+          </div>
+          <div id="last_name">
+            <label>Last Name</label>
+            <input class="border-color" type="text" />
+          </div>
         </div>
         <div id="email">
           <label for="">Email Address</label>
-          <input type="email" />
+          <input class="border-color" type="email" />
         </div>
-        <div id="email">
+        <div id="radio">
           <label for="">Query Type</label>
-          <input type="radio" /> General Enquiry <input type="radio" /> Support
-          Request
+          <div id="radioButton">
+            <div>
+              <input class="border-color" type="radio" />
+              <span>General Enquiry</span>
+            </div>
+            <div>
+              <input class="border-color" type="radio" />
+              <span> Support Request </span>
+            </div>
+          </div>
         </div>
         <div id="message">
           <label for="">Message</label>
-          <input type="text" />
+          <textarea class="border-color" type="text"></textarea>
         </div>
         <div id="checkBox">
           <input type="checkbox" name="" id="" />
