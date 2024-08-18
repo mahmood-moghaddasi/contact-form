@@ -86,9 +86,11 @@ label {
 #radio input[type="radio"] {
   margin-right: 6px;
   accent-color: var(--color-primary-green-600);
+  opacity: 0.3;
 }
 #checkBox input {
   accent-color: var(--color-primary-green-600);
+  opacity: 0.5;
 }
 #checkBox p {
   position: relative;
