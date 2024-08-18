@@ -92,6 +92,10 @@ label {
   accent-color: var(--color-primary-green-600);
   opacity: 0.5;
 }
+#checkBox input[type="checkbox"]:checked,
+#radio input[type="radio"]:checked {
+  opacity: 1;
+}
 #checkBox p {
   position: relative;
   top: -2.5px;
