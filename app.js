@@ -12,38 +12,36 @@ const radioButtonStyleHandler = (event) => {
     parent.style.backgroundColor = "#fff";
   }
 };
-// const errorMessage = (element) => {
-//   switch (element.name) {
-//     case 'first':
-//       return ""
-//       break;
 
-//     default:
-//       break;
-//   }
-// };
-const requiredValidation = (element) => {
+const inValidValue = (element) => {
   element.style.borderColor = "red";
-  //   element.parentElement.innerHTML += `
-  //  <p style="color:red">The field is required</p>
-  //   `;
-  console.dir(element.nextElementSibling);
-
   element.nextElementSibling.style.display = "block";
 };
 const validValue = (element) => {
   element.style.borderColor = "rgb(135, 163, 166)";
-  console.dir(element.nextElementSibling);
   element.nextElementSibling.style.display = "none";
-  // if p vojod dasht delet con
+};
+const validateEmail = (email) => {
+  return String(email)
+    .toLowerCase()
+    .match(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
 };
 const validation = () => {
   console.log("object");
   inputs.forEach((element) => {
     if (element.value.length === 0) {
-      requiredValidation(element);
+      inValidValue(element);
     } else {
       validValue(element);
+    }
+    if (element.name === "email" && element.value) {
+      if (validateEmail(element.value)) {
+        validValue(element);
+      } else {
+        inValidValue(element);
+      }
     }
   });
 };
