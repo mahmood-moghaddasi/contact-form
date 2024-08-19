@@ -1,9 +1,15 @@
+// const firstName = document.getElementById('')
+// const lastName = document.getElementById('')
+// const email = document.getElementById('')
+// const message = document.getElementById('')
+
 const radioGeneral = document.getElementById("general-query");
 const radioSupport = document.getElementById("support-query");
+const checkBox = document.getElementById("checkBox");
 const submitButton = document.getElementById("submit-button");
 const inputs = document.querySelectorAll(".input");
 const form = document.getElementById("form");
-const checkBox = document.getElementById("checkBox");
+const modal = document.querySelector(".modal");
 const radioButtonStyleHandler = () => {
   if (radioGeneral.checked === true) {
     radioGeneral.parentElement.style.backgroundColor = "hsl(148, 38%, 91%)";
@@ -18,6 +24,31 @@ const radioButtonStyleHandler = () => {
     radioGeneral.parentElement.style.borderColor = "rgb(135, 163, 166)";
   }
 };
+// const showModal = () => {
+//   let flag = true;
+//   inputs.forEach((element) => {
+//     if (element.value.length !== 0 && element.name !== "email") {
+//       flag = false;
+//       console.log("1");
+//     }
+//     if (
+//       (element.value.length !== 0 && element.name === "email") ||
+//       validateEmail(element.value)
+//     ) {
+//       flag = false;
+//       console.log("2");
+//     }
+//   });
+//   if (radioGeneral.checked === true || radioSupport.checked === true) {
+//     flag = false;
+//     console.log("3");
+//   }
+//   if (checkBox.checked === true) {
+//     flag = false;
+//     console.log("4");
+//   }
+//   if (flag === true) modal.style.display = "block";
+// };
 
 const inValidValue = (element) => {
   element.style.borderColor = "hsl(0, 66%, 54%)";
@@ -67,10 +98,12 @@ const checkBoxValidation = () => {
   }
 };
 const formHandler = (e) => {
-  e.preventDefault();
   validation();
   queryValidation();
   checkBoxValidation();
+  showModal();
+  e.preventDefault();
+  console.dir(e);
 };
 radioGeneral.addEventListener("click", radioButtonStyleHandler);
 radioSupport.addEventListener("click", radioButtonStyleHandler);
