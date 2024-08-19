@@ -9,45 +9,53 @@
   <body>
     <div class="container">
       <h2>Contact Us</h2>
-      <form action="">
+      <form id="form" action="">
         <div id="name">
           <div id="first_name">
             <label>First Name</label>
-            <input class="border-color" type="text" />
+            <input name="first" class="border-color input" type="text" />
+            <p class="error">The field is required</p>
           </div>
           <div id="last_name">
             <label>Last Name</label>
-            <input class="border-color" type="text" />
+            <input class="border-color input" type="text" />
+            <p class="error">The field is required</p>
           </div>
         </div>
         <div id="email">
           <label for="">Email Address</label>
-          <input class="border-color" type="email" />
+          <input class="border-color input" type="text" />
+          <p class="error">please enter a valid email address</p>
         </div>
         <div id="radio">
           <label for="">Query Type</label>
           <div id="radioButton">
             <div>
-              <input class="border-color" type="radio" />
+              <input id="general-query" class="border-color" type="radio" />
               <span>General Enquiry</span>
             </div>
             <div>
-              <input class="border-color" type="radio" />
+              <input id="support-query" class="border-color" type="radio" />
               <span> Support Request </span>
             </div>
           </div>
+          <p class="error">Please select a query type</p>
         </div>
         <div id="message">
           <label for="">Message</label>
-          <textarea class="border-color" type="text"></textarea>
+          <textarea class="border-color input" type="text"></textarea>
+          <p class="error">The field is required</p>
         </div>
         <div id="checkBox">
-          <input type="checkbox" name="" id="" />
+          <input type="checkbox" />
+          <p class="error">
+            To submit this form,please consent to being contacted
+          </p>
           <p style="display: inline-block">
             i consent to being contacted by the team
           </p>
         </div>
-        <button type="submit">Submit</button>
+        <button id="submit-button" type="submit">Submit</button>
       </form>
     </div>
     <script src="app.js"></script>

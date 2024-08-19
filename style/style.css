@@ -3,7 +3,7 @@
   --color-primary-green-600: rgb(12, 125, 105);
   --color-primary-red: hsl(0, 66%, 54%);
   --color-neutral-white: hsl(0, 0%, 100%);
-  --color-neutral-Grey-500: hsl(186, 15%, 59%);
+  --color-neutral-Grey-500: rgb(135, 163, 166);
   --color-neutral-Grey-900: hsl(187, 24%, 22%);
 }
 * {
@@ -126,4 +126,8 @@ input {
 }
 .border-color:hover {
   border: 1px rgb(12, 125, 105) solid;
+}
+.error {
+  color: red;
+  display: none;
 }
