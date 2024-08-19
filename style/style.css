@@ -10,10 +10,12 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Karla", sans-serif;
 }
 /* 
 - Mobile: 375px- Desktop: 1440px */
 body {
+  font-weight: 400;
   background-color: var(--color-primary-green-200);
   padding: 5rem 0;
 }
@@ -25,6 +27,7 @@ body {
   padding: 2rem;
 }
 h2 {
+  font-weight: 700;
   margin-bottom: 1.5rem;
   color: var(--color-neutral-Grey-900);
 }
@@ -40,15 +43,14 @@ form {
   justify-content: space-between;
   gap: 0.5rem;
 }
-#name label {
-  font-size: 16px;
-}
+
 #name div input {
   width: 280px;
   height: 35px;
   border-radius: 5px;
 }
 label {
+  font-size: 14px;
   display: block;
   margin-bottom: 0.5rem;
   color: var(--color-neutral-Grey-900);
@@ -93,6 +95,8 @@ label::after,
 #radio span {
   position: relative;
   top: -1px;
+  font-weight: 400;
+  font-size: 14px;
 }
 #radio input[type="radio"] {
   margin-right: 6px;
@@ -110,9 +114,11 @@ label::after,
 
 #checkBox-label {
   position: relative;
-  top: -2.5px;
+  top: -2px;
   left: 4px;
   display: inline-block;
+  font-weight: 400;
+  font-size: 14px;
 }
 button {
   height: 50px;
@@ -122,6 +128,7 @@ button {
   color: var(--color-neutral-white);
   cursor: pointer;
   font-size: 16px;
+  font-weight: 400;
 }
 button:hover {
   background-color: rgb(6, 61, 51);
@@ -145,5 +152,5 @@ input {
   color: hsl(0, 66%, 54%);
   display: none;
   font-size: 12px;
+  font-weight: 400;
 }
-/* star */
