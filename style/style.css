@@ -128,6 +128,8 @@ input {
   border: 1px rgb(12, 125, 105) solid;
 }
 .error {
-  color: red;
+  margin-top: 5px;
+  color: hsl(0, 66%, 54%);
   display: none;
+  font-size: 12px;
 }

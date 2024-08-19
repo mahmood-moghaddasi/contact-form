@@ -30,12 +30,12 @@
         <div id="radio">
           <label for="">Query Type</label>
           <div id="radioButton">
-            <div>
-              <input id="general-query" class="border-color" type="radio" />
+            <div class="border-color">
+              <input id="general-query" name="query" type="radio" />
               <span>General Enquiry</span>
             </div>
-            <div>
-              <input id="support-query" class="border-color" type="radio" />
+            <div class="border-color">
+              <input id="support-query" name="query" type="radio" />
               <span> Support Request </span>
             </div>
           </div>
@@ -48,11 +48,11 @@
         </div>
         <div id="checkBox">
           <input type="checkbox" />
-          <p class="error">
-            To submit this form,please consent to being contacted
-          </p>
           <p style="display: inline-block">
             i consent to being contacted by the team
+          </p>
+          <p class="error">
+            To submit this form,please consent to being contacted
           </p>
         </div>
         <button id="submit-button" type="submit">Submit</button>
