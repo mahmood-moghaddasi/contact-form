@@ -53,6 +53,17 @@ label {
   margin-bottom: 0.5rem;
   color: var(--color-neutral-Grey-900);
 }
+/* requeiment star */
+label::after,
+#checkBox-label::after {
+  content: "*";
+  font-size: 10px;
+  position: relative;
+  left: 4px;
+  bottom: 2px;
+  color: var(--color-primary-green-600);
+  font-weight: bold;
+}
 #email input {
   width: 568px;
   height: 35px;
@@ -96,10 +107,12 @@ label {
 #radio input[type="radio"]:checked {
   opacity: 1;
 }
-#checkBox p {
+
+#checkBox-label {
   position: relative;
   top: -2.5px;
   left: 4px;
+  display: inline-block;
 }
 button {
   height: 50px;
@@ -133,3 +146,4 @@ input {
   display: none;
   font-size: 12px;
 }
+/* star */
